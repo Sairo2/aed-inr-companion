@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="popup.css">
+    <title>AED → INR Companion</title>
+  </head>
+  <body>
+    <main>
+      <header><span class="mark">₹</span><div><h1>AED → INR</h1><p>Price companion</p></div></header>
+      <label class="switch-row"><span>Show INR estimates</span><input id="enabled" type="checkbox" role="switch"><i></i></label>
+      <section class="rate-card"><span>Current rate</span><strong id="rate">Loading…</strong><small id="updated">Fetching latest rate</small></section>
+      <button id="refresh" type="button">Refresh rate</button>
+      <label class="custom"><input id="use-custom" type="checkbox"> Use a custom rate</label>
+      <label class="rate-input" for="custom-rate">1 AED = INR<input id="custom-rate" type="number" min="0.01" step="0.01" inputmode="decimal" disabled></label>
+      <p id="status" role="status"></p>
+      <footer>Rates by ExchangeRate-API</footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
